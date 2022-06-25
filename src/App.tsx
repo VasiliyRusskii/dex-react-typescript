@@ -1,5 +1,7 @@
-import React from 'react';
-import { Input } from './ui/input/Input';
+import React from "react";
+import { Input } from "./components/ui/Input/Input";
+import { Button } from "./components/ui/Button";
+import { SearchInput } from "./components/ui/Input/SearchInput";
 
 
 function App() {
@@ -7,6 +9,8 @@ function App() {
     <div className="App">
       <h1>AvenirTest</h1>
       <Input/>
+      <Button >Sign In</Button>
+      <SearchInput/>
     </div>
   );
 }

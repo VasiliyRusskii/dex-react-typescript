@@ -21,7 +21,6 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src/assets/fonts.d.ts",
     "src"
   ]
 }
