@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { styledTheming } from "../../../assets/styles/styledTheming";
+import { theme } from "../../../assets/theme/theme";
 
 
 export const Input = () => {
@@ -11,37 +11,37 @@ export const Input = () => {
 };
 
 const InputContainer = styled.input`
-    background: ${styledTheming.colors.lightestGrey1};
+    background: ${theme.colors.lightestGrey1};
     border-radius: 4px;
     border: 0;
     width: 366px;
     height: 40px;
-    color: ${styledTheming.colors.darkGrey};
+    color: ${theme.colors.darkGrey};
     padding: 8px 0px 8px 12px;
     font-size: 14px;
     line-height: 24px;
     font-weight: 500;
 
     &:hover {
-        background: ${styledTheming.colors.lightestGrey};
+        background: ${theme.colors.lightestGrey};
     }
 
     &:focus {
-        background: ${styledTheming.colors.lightestGrey1};
+        background: ${theme.colors.lightestGrey1};
         box-shadow: 0px 0px 5px #D9D9D9;
         outline: none;
     }
 
     &:disabled {
-        color: ${styledTheming.colors.lightestGrey};
+        color: ${theme.colors.lightestGrey};
         &::placeholder {
-            color: ${styledTheming.colors.lightestGrey};
+            color: ${theme.colors.lightestGrey};
         }
         &:hover {
-            color: ${styledTheming.colors.lightestGrey1};
+            color: ${theme.colors.lightestGrey1};
 
             &::placeholder {
-            color: ${styledTheming.colors.lightestGrey1};
+            color: ${theme.colors.lightestGrey1};
         }
         }
     }

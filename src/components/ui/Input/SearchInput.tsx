@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { SearchIcon } from "../../../assets/icons/SearchIcon";
-import { styledTheming } from "../../../assets/styles/styledTheming";
+import { theme } from "../../../assets/theme/theme";
 
 export const SearchInput = () => {
     return (
@@ -23,7 +23,7 @@ const InputWrapper = styled.div`
     width: 366px;
     min-height: 40px;
     padding: 0 12px;
-    border: 0.5px solid ${styledTheming.colors.lightestGrey};
+    border: 0.5px solid ${theme.colors.lightestGrey};
     border-radius: 4px;
 `;
 

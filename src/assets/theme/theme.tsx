@@ -1,5 +1,4 @@
-export const styledTheming = {
-
+export const theme = {
     colors: {
         white: "#ffffff",
         darkGrey: "#303030",

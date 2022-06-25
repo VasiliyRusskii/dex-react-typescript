@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { styledTheming } from "../../assets/styles/styledTheming";
+import { theme } from "../../assets/theme/theme";
 
 export const Button = styled.button`
     font-size: 15px;
-    background: ${styledTheming.colors.red};
+    background: ${theme.colors.red};
     width: 365px;
     height: 40px;
     border-radius: 4px;
@@ -11,19 +11,19 @@ export const Button = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: ${styledTheming.colors.white};
+    color: ${theme.colors.white};
     line-height: 24px;
 
     &:hover {
-        background: ${styledTheming.colors.lightRed};
+        background: ${theme.colors.lightRed};
     }
 
     &:active {
-        background: ${styledTheming.colors.darkRed};
+        background: ${theme.colors.darkRed};
     }
 
     &:disabled {
-        background: ${styledTheming.colors.lightestGrey1};
-        color: ${styledTheming.colors.lightestGrey};
+        background: ${theme.colors.lightestGrey1};
+        color: ${theme.colors.lightestGrey};
     }
 `;
