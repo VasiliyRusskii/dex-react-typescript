@@ -34,15 +34,21 @@ export const GlobalStyles = createGlobalStyle`
       font-style: normal;
   }
 
-  *, **::before, *::after {
+  *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  body {
+  body, html  {
+    min-width: 320px;
+    height: 100%;
     font-family: "CustomAvenir", sans-serif;
     font-size: 14px;
     font-weight: 500;
+  }
+
+  #root {
+    height: 100%;
   }
 `; 

@@ -1,24 +1,15 @@
-import React from "react";
-import { Input } from "./components/ui/Input/Input";
-import { Button } from "./components/ui/button/Button";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./assets/theme/global";
 import { theme } from "./assets/theme/theme";
-import { GlobalStyles } from "./assets/theme/global"
-import { ReactComponent as SearchIcon } from "../src/assets/icons/search.svg"
-import { AuthorizationForm } from "./pages/authorization/components/AuthorizationForm";
+import { AuthorizationPage } from "./pages/authorization/components/AuthorizationForm";
 
-
-function App() {
+const App = () => {
   return (
     <ThemeProvider theme={theme}>
-    <Root>
       <GlobalStyles/>
-      <AuthorizationForm/>
-    </Root>
+      <AuthorizationPage/>
     </ThemeProvider>
   );
 }
-
-const Root = styled.div``
 
 export default App;

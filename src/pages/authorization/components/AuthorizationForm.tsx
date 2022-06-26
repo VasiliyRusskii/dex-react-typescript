@@ -2,16 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "../../../components/ui/button/Button";
 import { Input } from "../../../components/ui/Input/Input";
-import { ReactComponent as EyeIcon } from "../../../assets/icons/eyeIcon.svg";
+import { ReactComponent as EyeIcon } from "../../../assets/icons/EyeIcon.svg";
 import { ReactComponent as GroupLogin } from "../../../assets/icons/groupLogin.svg";
-import { FormState, UseFormHandleSubmit } from "react-hook-form";
 
-export const AuthorizationForm = () => {
+export const AuthorizationPage = () => {
   return (
     <Wrapper>
       <Form>
         <Title>Sign In</Title>
-        <Input label={"Login"} placeholder="Enter your username" />
+        <StyledInput label={"Login"} placeholder="Enter your username" />
         <Input label={"Password"} placeholder="Enter your password" icon={<EyeIcon />} />
         <ButtonWrapper>
           <Button expanded>Sign In</Button>
@@ -29,14 +28,24 @@ export const AuthorizationForm = () => {
   );
 };
 
+const StyledInput = styled(Input)`
+  margin-bottom: 24px;
+`;
+
 const Title = styled.h1`
   font-weight: 400;
   color: ${(props) => props.theme.colors.blue};
   align-items: center;
   text-align: center;
+  margin-bottom: 32px;
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const Background = styled.div`
   display: none;
@@ -46,6 +55,7 @@ const Background = styled.div`
 const WrapperGroup = styled.div``;
 
 const Form = styled.div`
+  width: 100%;
   margin-left: 24px;
   margin-right: 24px;
 `;
@@ -67,6 +77,6 @@ const SignUp = styled.div`
 `;
 
 const SignUpSpan = styled.span`
-  color: red;
+  color: ${(props) => props.theme.colors.red};
   text-decoration: underline;
 `;

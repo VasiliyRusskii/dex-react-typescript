@@ -5,26 +5,27 @@ export interface IInputProps extends Omit<InputHTMLAttributes<HTMLInputElement>,
   icon?: ReactNode;
   label?: string;
   error?: string;
+  className?: string;
 }
 
-export const Input = ({ error, icon, label, ...props }: IInputProps) => {
+export const Input = ({ error, icon, label, className, ...props }: IInputProps) => {
   return (
-    <Root>
+    <Wrapper className={className}>
       {label && <Label>{label}</Label>}
 
-      <Wrapper error={!!error}>
-        <InputContainer {...props} />
+      <InputWrapper error={!!error}>
+        <StyledInput {...props} />
         {icon && <IconWrapper>{icon}</IconWrapper>}
-      </Wrapper>
+      </InputWrapper>
 
       {error && <Error>{error}</Error>}
-    </Root>
+    </Wrapper>
   );
 };
 
-const Root = styled.div``;
+const Wrapper = styled.div``;
+
 const Label = styled.div`
-  margin-top: 24px;
   margin-bottom: 8px;
   color: ${(props) => props.theme.colors.grey};
 `;
@@ -42,7 +43,7 @@ const IconWrapper = styled.div`
   height: 16px;
 `;
 
-const Wrapper = styled.div<{ error: boolean }>`
+const InputWrapper = styled.div<{ error: boolean }>`
   background: ${(props) => props.theme.colors.lightestGrey1};
   display: flex;
   align-items: center;
@@ -50,8 +51,7 @@ const Wrapper = styled.div<{ error: boolean }>`
   border-radius: 4px;
   border: ${({ error }) => (error ? "1px solid #FF768E" : "none")};
 
-  width: 100%;
-  height: 32px;
+  height: 40px;
   color: ${(props) => props.theme.colors.darkGrey};
   padding: 0 12px;
   line-height: 24px;
@@ -80,7 +80,7 @@ const Wrapper = styled.div<{ error: boolean }>`
   }
 `;
 
-const InputContainer = styled.input`
+const StyledInput = styled.input`
   border: none;
   background: none;
   height: 100%;
@@ -99,31 +99,3 @@ const InputContainer = styled.input`
     font: inherit;
   }
 `;
-
-// const InputWrapper = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   color: ${styledTheming.colors.darkGrey};
-//   background: ${styledTheming.colors.lightestGrey1};
-//   width: 100%;
-//   height: 40px;
-//   padding: 0 12px;
-//   border: 0;
-//   border-radius: 4px;
-// `;
-
-// const IconWrapper = styled.div`
-
-// `;
-
-// const StyledInput = styled.input`
-//   width: 100%;
-//   height: 100%;
-//   background: transparent;
-//   border: none;
-
-//   &:focus {
-//     outline: none;
-//   }
-// `;
