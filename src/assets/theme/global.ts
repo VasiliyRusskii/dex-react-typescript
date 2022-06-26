@@ -42,6 +42,7 @@ export const GlobalStyles = createGlobalStyle`
   
   body {
     font-family: "CustomAvenir", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 500;
   }
 `; 
